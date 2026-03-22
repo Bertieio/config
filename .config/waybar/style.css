@@ -21,20 +21,23 @@
 window#waybar {
   background: alpha(@color-base, 0.8);
   border-radius: 15px;
- }
+  font-weight: 700;
+}
 
 .modules-left {
-  background: @color-iris;
+  background: @color-rose;
   border-radius: 15px;
 }
 
 #workspaces button.active {
-  background: @color-iris-dark;
+  background: @color-gold;
+  color: @color-surface;
   border-radius: 15px;
 }
 
 #window{
   border-radius: 15px;
   padding: 0 15px;
-  background: @color-foam;
+  background: @color-rose;
+  color: @color-surface;
 }
