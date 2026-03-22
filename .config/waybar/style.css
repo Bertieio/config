@@ -24,11 +24,6 @@ window#waybar {
   font-weight: 700;
 }
 
-.modules-left {
-  background: @color-rose;
-  border-radius: 15px;
-}
-
 #workspaces button.active {
   background: @color-gold;
   color: @color-surface;
@@ -39,5 +34,29 @@ window#waybar {
   border-radius: 15px;
   padding: 0 15px;
   background: @color-rose;
+  color: @color-surface;
+}
+
+#battery{
+  padding: 0 15px;
+  background: @color-rose;
+  border-radius: 15px;
+  margin: 0 5px;
+  color: @color-surface;
+}
+
+#clock{
+  padding: 0 15px;
+  background: @color-rose;
+  border-radius: 15px;
+  margin: 0 5px;
+  color: @color-surface;
+}
+
+#bluetooth{
+  padding: 0 15px;
+  background: @color-rose;
+  border-radius: 15px;
+  margin: 0 5px;
   color: @color-surface;
 }

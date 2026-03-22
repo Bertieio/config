@@ -1,10 +1,13 @@
 {
   "layer": "top",
+  "margin-top": 10,
+  "margin-left": 10,
+  "margin-right": 10,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["battery","clock"],
+  "modules-right": ["battery","clock", "bluetooth"],
   "hyprland/window": {
-    "max-length": 50
+    "max-length": 50,
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -12,5 +15,17 @@
   },
   "clock": {
     "format-alt": "{:%a, d%. %b %H:%M}"
-  }
+  },
+  "bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	  "format": " {status}",
+	  "format-connected": " {num_connections} connected",
+		"format-disabled": "󰂲",
+		"format-off": "󰂲",
+		"format-on": "󰂰",
+		"format-connected": "󰂱",
+	  "tooltip-format": "{controller_alias}\t{controller_address}",
+	  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  },
 }
