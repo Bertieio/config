@@ -1,31 +1,31 @@
 {
   "layer": "top",
-  "margin-top": 10,
-  "margin-left": 10,
-  "margin-right": 10,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["battery","clock", "bluetooth"],
+  "modules-right": ["battery","clock", "backlight", "backlight/slider"],
   "hyprland/window": {
     "max-length": 50,
   },
   "battery": {
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format": "{icon} {capacity}%",
+    "format-icons": {
+      "default": ["󰂎 ", "󰁺 ", "󰁻 ", "󰁼 ", "󰁽 ", "󰁾 ", "󰁿 ", "󰂀 ", "󰂁 ", "󰂂 ", "󰁹 "],
+      "charging": ["󰢟 ", "󰢜 ", "󰂆 ", "󰂇 ", "󰂈 ", "󰢝 ", "󰂉 ", "󰢞 ", "󰂊 ", "󰂋 ", "󰂅 "]
+    },
   },
   "clock": {
-    "format-alt": "{:%a, d%. %b %H:%M}"
+    "format": "  {:%H:%M}",
+    "format-alt": "{}",
+    "tooltip": false,
   },
-  "bluetooth": {
-	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-	  "format": " {status}",
-	  "format-connected": " {num_connections} connected",
-		"format-disabled": "󰂲",
-		"format-off": "󰂲",
-		"format-on": "󰂰",
-		"format-connected": "󰂱",
-	  "tooltip-format": "{controller_alias}\t{controller_address}",
-	  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
+  },
+  "backlight/slider": {
+    "min": 1,
+    "max": 100,
+    "orientation": "vertical"
   },
 }
