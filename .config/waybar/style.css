@@ -5,8 +5,10 @@
 @define-color color-blue-white #E8F9FF;
 @define-color color-sandy #FDFAD4;
 @define-color color-black #0F0F0F;
-@define-color color-green #677A1E;
+@define-color color-green #488615;
 @define-color color-azure #0080ff;
+@define-color color-fire-red #F73718;
+
 
 @define-color color-surface #2a273f;
 @define-color color-overlay #393552;
@@ -60,21 +62,64 @@ window#waybar {
   background: @color-green;
   border-radius: 15px;
   margin: 10px 5px;
-  color: @color-surface;
+  color: @color-black;
 }
 
 #clock{
   padding: 0 15px;
-  background: @color-azure;
+  background: @color-green;
   border-radius: 15px;
   margin: 10px 5px;
-  color: @color-surface;
+  color: @color-black;
 }
 
-#bluetooth{
+#brightness {
+  background: @color-green;
+  margin: 10px 5px;
+  border-radius: 15px;
+  color: @color-black;
+}
+
+#backlight {
   padding: 0 15px;
-  background: @color-rose;
   border-radius: 15px;
   margin: 10px 5px;
-  color: @color-surface;
+  background: @color-green;
+}
+
+#backlight-slider {
+  padding: 0 15px;
+  border-radius: 15px;
+  margin: 10px 5px;
+  background: @color-green;
+}
+
+#backlight-slider trough {
+  min-width: 100px;
+}
+
+
+#sound {
+  background: @color-green;
+  margin: 10px 5px;
+  border-radius: 15px;
+  color: @color-black;
+}
+
+#pulseaudio {
+  padding: 0 15px;
+  border-radius: 15px;
+  margin: 10px 5px;
+  background: @color-green;
+}
+
+#pulseaudio-slider {
+  padding: 0 15px;
+  border-radius: 15px;
+  margin: 10px 5px;
+  background: @color-green;
+}
+
+#pulseaudio-slider trough {
+  min-width: 100px;
 }
