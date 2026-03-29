@@ -1,33 +1,22 @@
 import Quickshell
 import QtQuick
+
 import "../Modules"
-import "../theme/Colors.qml" as Theme
 
 
 Rectangle {
     id: rectangleClock
 
-    property real margin: 5;
-
-
-    //colors
-    property color activeColor: "#426180"; 
-    property color inactiveColor: "#488165"; 
-    
-    property color textColor: '#000017'; 
-    //colors
-
-
     property bool isHovered: hover.hovered;
+    
+    color: isHovered ? root.activeColor : root.inactiveColor;
+    radius: root.radius;
 
-    color: isHovered ? activeColor : inactiveColor;
-    radius: 20;
+    //x: root.margin;
+    //y: root.margin
 
-    x: margin;
-    y: margin
-
-    implicitHeight: 35;
-    implicitWidth: textClock.implicitWidth + margin * 4;
+    implicitHeight: root.itemHeight;
+    implicitWidth: textClock.implicitWidth + root.margin * 4;
     
     
     SystemClock {
@@ -43,13 +32,13 @@ Rectangle {
     Text {
         id: textClock;
         
-        x: parent.margin*2;
-        y: parent.margin;
+        x: root.margin*2;
+        y: root.margin;
         
-        font.pointSize: 15;
+        font.pointSize: root.fontSize;
         font.family: "JetBrainsMono Nerd Font Propo"
         font.bold: true
-        color: textColor;
+        color: root.textColor;
 
         text: " " + Qt.formatDateTime(clock.date, "hh:mm")
     }
@@ -57,6 +46,6 @@ Rectangle {
     LazyLoader {
         active: isHovered;
 
-        Calendar{posX: x; posY: y}
+        Calendar{}
     }
 }

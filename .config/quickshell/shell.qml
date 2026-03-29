@@ -1,18 +1,55 @@
 import Quickshell
 import QtQuick
 import Quickshell.Io
+import QtQuick.Layouts
 
 import "./Modules"
 
 PanelWindow {
-  property real margin: 5
+  id: root;
+
+
+  property color activeColor: "#426180"; 
+  property color inactiveColor: "#488165"; 
+  property color textColor: "#000017"; 
+  property color secondaryColor: "#2d2d40";
+
+  property color warnColor: '#c7ab3b';
+  property color alertColor: '#c23737';
+
+  
+  property real margin: 5;
+  property real radius: 20;
+  property real fontSize: 15;
+  property real itemHeight: 35;
+
+
+
+  
   anchors {
     top: true
     left: true
     right: true
   }
-  color: '#000000dd'
-  implicitHeight: 40
+  color: "#000000dd"
+  implicitHeight: 50
 
-  Clock{}
+  RowLayout {
+    id: leftBar
+    spacing:  margin*2
+    y: margin*2
+    x: margin*2
+
+    Clock{}
+    Battery{}
+  }
+
+  RowLayout {
+    id: centerBar
+    spacing:  margin*2
+    y: margin*2
+    anchors.horizontalCenter: parent.horizontalCenter
+
+    Workspaces{}
+  }
 }
