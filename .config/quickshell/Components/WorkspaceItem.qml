@@ -12,6 +12,8 @@ Text {
     font.pointSize: root.fontSize;
     font.family: "JetBrainsMono Nerd Font Propo"
     font.bold: true
+    color: workspaceActive ? root.textColor : root.secondaryColor;
+
 
     property string workspaceIcon: {
         if(workspaceActive){
@@ -25,7 +27,6 @@ Text {
         }
     }
 
-    color: workspaceActive ? root.textColor : root.secondaryColor;
 
     text: workspaceIcon
 
@@ -39,6 +40,7 @@ Text {
         onClicked:{
             workspaceItem.activate()
         }
+        cursorShape: Qt.PointingHandCursor; 
     }
 
 }

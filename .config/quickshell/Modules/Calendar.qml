@@ -5,11 +5,14 @@ import QtQuick.Layouts;
 PopupWindow {
     id: calendar;
 
+    property var parentBar:;
+    property var parentObject:;
+
     visible: true;
 
     anchor.window: root;
-    anchor.rect.x: root.margin*2;
-    anchor.rect.y: rectangleClock.y + rectangleClock.implicitHeight + root.margin*3;
+    anchor.rect.x: parentBar.x + parentObject.x;
+    anchor.rect.y: parentObject.y + parentObject.implicitHeight + root.margin*3;
 
     color: "#000000ff"; 
 

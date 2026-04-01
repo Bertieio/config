@@ -46,6 +46,6 @@ Rectangle {
     LazyLoader {
         active: isHovered;
 
-        Calendar{}
+        Calendar{parentBar: parent; parentObject: rectangleClock}
     }
 }
