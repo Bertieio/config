@@ -12,7 +12,7 @@ PopupWindow {
 
     visible: true;
 
-    anchor.window: root;
+    anchor.window: topBar;
     anchor.rect.x: parentBar.x + parentObject.x;
     anchor.rect.y: parentObject.y + parentObject.implicitHeight + root.margin*3;
 
