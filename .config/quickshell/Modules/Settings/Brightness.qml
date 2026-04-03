@@ -13,8 +13,6 @@ Rectangle{
     property real maxBrightnessValue
     property real getBrightnessValue
 
-    property var log
-
     Component.onCompleted: {
         getMaxBrightness()
         getBrightness()

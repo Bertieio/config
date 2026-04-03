@@ -35,6 +35,7 @@ PopupWindow {
             anchors.topMargin: root.radius;
             anchors.bottomMargin: root.radius;
             Brightness{}
+            Volume{}
         }        
 
     }

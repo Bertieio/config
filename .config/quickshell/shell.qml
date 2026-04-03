@@ -71,5 +71,6 @@ PanelWindow {
     anchors.topMargin: margin*2
     
     Settings{}
+    Power{}
   }
 }
