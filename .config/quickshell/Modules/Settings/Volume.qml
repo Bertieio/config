@@ -96,6 +96,4 @@ Rectangle{
         triggeredOnStart: true
         onTriggered: getVolume()
     }
-
-
 }

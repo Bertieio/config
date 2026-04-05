@@ -51,9 +51,7 @@ Rectangle {
     implicitHeight: root.itemHeight;
     implicitWidth: textBattery.implicitWidth + root.margin * 4;
 
-
-
-
+    
     HoverHandler {
         id: hover;
         cursorShape: Qt.PointingHandCursor; 

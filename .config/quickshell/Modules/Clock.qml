@@ -12,9 +12,6 @@ Rectangle {
     color: isHovered ? root.activeColor : root.inactiveColor;
     radius: root.radius;
 
-    //x: root.margin;
-    //y: root.margin
-
     implicitHeight: root.itemHeight;
     implicitWidth: textClock.implicitWidth + root.margin * 4;
     

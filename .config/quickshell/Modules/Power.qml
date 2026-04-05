@@ -15,7 +15,6 @@ Rectangle {
     radius: root.radius;
 
     x: root.margin;
-    //y: root.margin
 
     implicitHeight: root.itemHeight;
     implicitWidth: textPower.implicitWidth + root.margin * 4;

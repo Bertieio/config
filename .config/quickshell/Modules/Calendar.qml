@@ -97,8 +97,4 @@ PopupWindow {
             }
         }
     }
-    
-   
-
-
 }
