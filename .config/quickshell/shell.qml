@@ -24,6 +24,9 @@ ShellRoot{
   property real fontSize: 15;
   property real itemHeight: 35;
 
+  property int notifTimeout: 10;
+  property bool notifAgeOut: true;
+
   TopBar{} 
   Notifications{}
 

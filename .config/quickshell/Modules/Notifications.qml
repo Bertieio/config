@@ -4,28 +4,30 @@ import Quickshell.Io
 import QtQuick.Layouts
 import Quickshell.Services.Notifications
 
-import "./Modules"
+import "../Modules"
+import "../Utils"
+import "../Components"
 
-NotificationServer {
-  id: notifServer
-  persistenceSupported: true
-  bodySupported: true
-  bodyMarkupSupported: true
-  bodyHyperlinksSupported: false
-  bodyImagesSupported: false
-  actionsSupported: true
-  actionIconsSupported: false
-  imageSupported: true
 
-  onNotification: notif => {
+PanelWindow {
+  id: notifBar;
+  visible: NotificationsUtil.displayNotifs
+
+  implicitWidth: notifList.implicitWidth
+  implicitHeight: notifList.implicitHeight
+
+  color: "#000000dd"
+
+  anchors {
+    top: true
+    right: true
+  }
+
+  ColumnLayout {
+    id: notifList
+    Repeater {
+      model: NotificationsUtil.popupNotifs
+      NotificationBox{n: modelData}
+    }
   }
 }
-
-//PanelWindow {
-//  id: notifcations;
-//  visible: false
-//  anchors {
-//    top: true
-//    right: true
-//  }
-//}
