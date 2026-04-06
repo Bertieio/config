@@ -3,7 +3,7 @@ import QtQuick
 import Quickshell.Io
 import QtQuick.Layouts
 
-import "./Modules"
+import "../Modules"
 
 
   PanelWindow {
