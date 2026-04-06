@@ -13,7 +13,7 @@ Rectangle{
     id: volumeRectange
 
     property real volume: volumeSlider.value
-    property var getVolumeValue
+    property var getVolumeValue: 0;
 
     Component.onCompleted: {
         getVolume()
