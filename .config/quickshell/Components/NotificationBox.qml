@@ -1,10 +1,13 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtQuick.Layouts
 import Quickshell
 import Quickshell.Services.Notifications
 
 import "../Utils"  
+
+//󰂚
 
 Rectangle{
     id: notif
@@ -17,35 +20,31 @@ Rectangle{
 
     implicitHeight: 150 + root.margin*4
     implicitWidth: 500 + root.margin*4
-    color: root.activeColor
+    color: root.inactiveColor
 
     radius: root.radius
 
-    Rectangle {
-        id: notifContent
-        anchors.fill: parent
-        anchors.margins: root.margin
-
-        color: root.activeColor
-
-        radius: root.radius 
         
-        Image{
-            x: margin*2
-            y: margin
-            source: image
-            height: 150
-            width: 150
-        }
 
-        Text {
-            text: n.summary
-        }
-
+    Image{
+        x: margin*2
+        y: margin*2
+        source: image
+        height: 150
+        width: 150
+    }
+    Text {
+        x: 150
+        text: n.summary
     }
 
-    
-    
+
+
+
+
+
+
+
     function getElapsed(): int {
         if (elapsed >= root.notifTimeout && root.notifAgeOut){
             NotificationsUtil.dismisNotif(n)

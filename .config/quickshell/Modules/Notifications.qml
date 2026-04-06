@@ -23,6 +23,10 @@ PanelWindow {
     right: true
   }
 
+  margins {
+    right: root.margin*2
+  }
+
   ColumnLayout {
     id: notifList
     Repeater {

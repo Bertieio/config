@@ -31,6 +31,8 @@ Singleton {
     }
 
     function onNewNotif(notif){
+        if(!notif.summary || !notif.body)
+            return 
         allNotifis = [notif, ...allNotifis];
         
         if (notif.lastGeneration)
