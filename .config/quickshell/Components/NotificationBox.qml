@@ -59,12 +59,34 @@ Rectangle{
 
         }
     }
+
+    Rectangle {
+        height:150
+        y: root.margin*2
+        x: root.margin*4 + 150
+        width: 350 - root.margin*2
+        radius: root.radius
+        color: root.inactiveColorDarker
+
+    }
     Text {
         x: 150+root.margin*4
         y: root.margin*2
+        font.pointSize:25
+        font.bold: true
+        font.family: "JetBrainsMono Nerd Font Propo"
         text: n.summary
-    }
+    
 
+    Text {
+       // x: 150+root.margin*4
+        //y: root.margin*2
+        font.pointSize:25
+        font.bold: true
+        font.family: "JetBrainsMono Nerd Font Propo"
+        text: n.body
+    }
+    }
 
 
 
