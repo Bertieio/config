@@ -26,15 +26,42 @@ Rectangle{
 
         
 
+ 
+
     Image{
-        x: margin*2
-        y: margin*2
         source: image
         height: 150
         width: 150
+        x: root.margin*2
+        y: root.margin*2
+        visible: hasImage
+    }
+    Rectangle{
+        height: 150
+        width: 150
+        x: root.margin*2
+        y: root.margin*2
+        visible: !hasImage
+        radius: root.radius
+        color: root.inactiveColorDarker
+        Text {
+            x:-10
+            y:0
+            anchors.fill: parent
+            horizontalAlignment: Text.AlignHCenter 
+            verticalAlignment: Text.AlignVCenter
+            text: "󰂚"
+            height: parent.height
+            width: parent.width
+            font.pointSize: 115
+            font.family: "JetBrainsMono Nerd Font Propo"
+            color: root.secondaryColor
+
+        }
     }
     Text {
-        x: 150
+        x: 150+root.margin*4
+        y: root.margin*2
         text: n.summary
     }
 
