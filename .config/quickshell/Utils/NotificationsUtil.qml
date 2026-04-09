@@ -40,7 +40,6 @@ Singleton {
 
         popupNotifs = [notif, ...popupNotifs]
         displayNotifs = true 
-        console.log("notif: appName", notif.appName || "null", ", appIcon", notif.appIcon || "null", ", image", notif.image || "null", ", expireTimeout", notif.expireTimeout)    
     }
 
     function dismisNotif(notif){
@@ -48,7 +47,5 @@ Singleton {
         if (popupNotifs.length == 0){
             displayNotifs = false;
         }   
-        console.log("removed" + popupNotifs.length)
-
     }
 }

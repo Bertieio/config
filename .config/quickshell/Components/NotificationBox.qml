@@ -68,26 +68,34 @@ Rectangle{
         radius: root.radius
         color: root.inactiveColorDarker
 
-    }
+    
     Text {
-        x: 150+root.margin*4
-        y: root.margin*2
         font.pointSize:25
         font.bold: true
         font.family: "JetBrainsMono Nerd Font Propo"
         text: n.summary
-    
+        height: parent.height
+        width: parent.width
+        horizontalAlignment: Text.AlignHCenter 
+        elide: Text.ElideRight
+        maximumLineCount: 1
+    }
 
     Text {
        // x: 150+root.margin*4
-        //y: root.margin*2
-        font.pointSize:25
+        y: 35
+        height: parent.height - root.margin*4
+        width: parent.width- root.margin*4
+        x: root.margin*2
+        font.pointSize:15
         font.bold: true
         font.family: "JetBrainsMono Nerd Font Propo"
         text: n.body
-    }
-    }
+        wrapMode: Text.Wrap
+        elide: Text.ElideRight
 
+    }
+    }
 
 
 
@@ -98,6 +106,11 @@ Rectangle{
         if (elapsed >= root.notifTimeout && root.notifAgeOut){
             NotificationsUtil.dismisNotif(n)
         }
+
+        if (n === null){
+            NotificationsUtil.dismisNotif(n)
+        }
+
         return Math.floor(Date.now() / 1000) - Math.floor(n.time / 1000);
     }
 
