@@ -52,6 +52,8 @@ import "../Components"
       anchors.top: parent.top
       anchors.topMargin: margin*2
     
+      Player{}
+      Blank{w:200}
       Settings{}
       Power{}
     }
