@@ -16,7 +16,7 @@ import QtQuick
     property var active: {
         for (var i = 0; i < list.length; i++) {
             if (list[i]?.isPlaying) {
-                console.log(list[i].trackTitle)
+                console.log(list[i].identity)
                 return list[i]
             }
         }
