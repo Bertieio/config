@@ -7,7 +7,7 @@ Text {
     id: workspace;
     property var workspaceItem: ;
     property bool workspaceActive: workspaceItem.active;
-    property bool isHovered: hover.hovered;
+    property bool isHovered: mouse.containsMouse;
 
     font.pointSize: root.fontSize;
     font.family: "JetBrainsMono Nerd Font Propo"
@@ -29,13 +29,10 @@ Text {
 
 
     text: workspaceIcon
-
-    HoverHandler {
-        id: hover;
-        cursorShape: Qt.PointingHandCursor; 
-    }
-
+    
     MouseArea {
+        id: mouse
+        hoverEnabled: true
         anchors.fill: parent;
         onClicked:{
             workspaceItem.activate()
