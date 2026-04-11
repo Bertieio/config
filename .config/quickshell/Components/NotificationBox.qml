@@ -107,10 +107,6 @@ Rectangle{
             NotificationsUtil.dismisNotif(n)
         }
 
-        if (n === null){
-            NotificationsUtil.dismisNotif(n)
-        }
-
         return Math.floor(Date.now() / 1000) - Math.floor(n.time / 1000);
     }
 
