@@ -28,6 +28,8 @@ import "../Components"
     
       Clock{}
       Battery{}
+      Blank{w:300}
+      ResourceUsage{}
     }
 
     RowLayout {
@@ -53,7 +55,7 @@ import "../Components"
       anchors.topMargin: margin*2
     
       Player{}
-      Blank{w:200}
+      Blank{w:300}
       Settings{}
       Power{}
     }
