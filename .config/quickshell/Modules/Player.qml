@@ -6,11 +6,14 @@ import Quickshell.Services.Mpris
 import "../Modules"
 import "../Components"
 import "../Utils"
+import "../Cassette"
 
 // 
 
 Rectangle{
     id: playerRectangle
+    
+    property bool tTAClicked: false;
 
     property var player: MprisUtil.active;
     property int tTAWidith: 300
@@ -124,7 +127,7 @@ Rectangle{
         }
 
         Rectangle{
-            color: root.inactiveColorDarker
+            color: tTAClicked ? root.activeColorDarker : root.inactiveColorDarker
             implicitWidth: tTAWidith+root.margin*2
             implicitHeight: root.itemHeight
             radius: root.radius
@@ -192,6 +195,23 @@ Rectangle{
                     }
                 }
 
+            }
+            MouseArea{
+                id: mouseTTA
+                hoverEnabled: true
+                anchors.fill: parent
+                cursorShape: Qt.PointingHandCursor
+                onClicked: {
+                    if(!tTAClicked){
+                        tTAClicked = true
+                    }else{
+                        tTAClicked = false
+                    }
+                }
+            }
+            LazyLoader {
+                active: tTAClicked
+                Walkman{parentBar: parent; parentObject: playerRectangle}
             }
         }
     }
