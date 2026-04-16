@@ -8,7 +8,7 @@ import "../Components"
 import "../Utils"
 import "../Cassette"
 
-// 
+// 󰒭 󰒮 󰏤
 
 Rectangle{
     id: playerRectangle
@@ -29,7 +29,6 @@ Rectangle{
         x: root.margin * 2
         spacing: root.margin
 
-        // 󰒭 󰒮 󰏤
         Rectangle{
             color: isHovered ? root.activeColorDarker : root.inactiveColorDarker
             implicitHeight: root.itemHeight
